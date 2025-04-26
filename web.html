@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZeroBugs - Debugging Event</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Times New Roman', Times, serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #000;
+    }
+
+    header {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 60px 20px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      border-bottom: 3px solid #2e8b57;
+    }
+
+    header h1 {
+      font-size: 48px;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    header p {
+      font-size: 20px;
+      margin-top: 10px;
+    }
+
+    section {
+      padding: 40px;
+      background-color: #fff;
+      margin: 40px auto;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      max-width: 1200px;
+    }
+
+    h2 {
+      font-size: 32px;
+      text-align: center;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .event-details {
+      font-size: 18px;
+      text-align: center;
+      line-height: 1.6;
+    }
+
+    .highlight {
+      font-weight: bold;
+      color: #4CAF50;
+    }
+
+    .debugging-questions ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .debugging-questions li {
+      background-color: #f0f0f0;
+      margin: 20px 0;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .debugging-questions li:hover {
+      transform: scale(1.02);
+    }
+
+    .debugging-questions pre {
+      background-color: #e6e6e6;
+      padding: 15px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 16px;
+      color: #000;
+    }
+
+    .expected-output {
+      margin-top: 15px;
+      padding: 15px;
+      background-color: #e6ffe6;
+      border-left: 5px solid #4CAF50;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .hint {
+      background: #fff8dc;
+      border-left: 4px solid #ffa500;
+      padding: 10px;
+      margin-top: 10px;
+      display: none;
+      font-style: italic;
+      color: #333;
+    }
+
+    .toggle-hint-btn {
+      margin-top: 10px;
+      background-color: transparent;
+      border: 1px solid #4CAF50;
+      color: #4CAF50;
+      padding: 5px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .debugging-questions label {
+      display: flex;
+      align-items: center;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      cursor: pointer;
+    }
+
+    .scoreboard {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      font-size: 24px;
+      font-weight: 600;
+      color: #000;
+      border: 2px solid #4CAF50;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: #fff;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      header h1 { font-size: 32px; }
+      h2 { font-size: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>ZeroBugs Debugging Event</h1>
+  <p>The Ultimate Debugging Challenge</p>
+</header>
+
+<section>
+  <h2>Event Details</h2>
+  <p class="event-details">
+    <span class="highlight">Event Name:</span> ZeroBugs Debugging Event <br>
+    <span class="highlight">Date:</span> 26th April 2025 <br>
+    <span class="highlight">Organized By:</span> CSE 3rd years <br>
+    <span class="highlight">Technologies Involved:</span> Python, C, Java, HTML
+  </p>
+  <p style="text-align: center; margin-top: 20px;">
+    ZeroBugs is a hands-on event where participants compete to fix bugs across various programming languages.
+  </p>
+</section>
+
+<section class="debugging-questions">
+  <h2>Debugging Questions</h2>
+  <ul>
+    <!-- Python -->
+    <li>
+      <h4>Python - Question 1</h4>
+      <p>Debug the following Python code:</p>
+      <pre>
+        x=int(“Enter value of x:”)	
+        for in range [0,10]:	
+        if x=y		
+        print(x+y
+        else:	
+        print(x‐y)
+        
+      </pre>
+      
+      <div class="expected-output"><strong>Expected Output:</strong> : 10</div>
+      <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+    </li>
+    <li>
+        <h4>Python - Question 2</h4>
+        <p>Debug the following Python code:</p>
+        <pre>
+          
+            a,b=0		
+            if(a=b)                                                                                              	
+            a+b=c		
+            print(z)
+            
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong> : 0</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+        <h4>Python - Question 3</h4>
+        <p>Debug the following Python code:</p>
+        <pre>
+            weather='raining'	
+            if weather='sunny':	
+            print("wear sunblock")	
+            elif weather='snow':	                                                  
+            print("going skiing")	
+            else:	
+             print(sunny)
+            
+          
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong> : raining</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+        <h4>Python - Question 4</h4>
+        <p>What Will be The EXPECTED OUTPUT Of The Following Code Snippet?:</p>
+        <pre>
+            my_dict	={}	
+            my_dict[(1,2,4)]=8	
+            my_dict[(4,2,1)]=10	
+            my_dict[(1,2)]=12	
+            sum=0	
+            for k in my_dict:	
+            sum+=my_dict[k]	
+            print (sum)	
+            print(my_dict)
+            
+          
+        </pre>
+        
+        <div class="expected-output"><strong>Options:</strong> :
+             <br>A. Syntax error</br>
+            <br> B.30				
+            {(1,2):12,(4,2,1):10,(1,2,	4):8}     </br>                                            
+            <br>C.47	
+            {(1,2):12,(4,2,1):10,(1,2,	4):8}	</br>
+           <br> D.30	
+            {[1,2]:12,[4,2,1]:10,[1,2,	4]:8}</br>
+            </div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+        <h4>Python - Question 5</h4>
+        <p>Debug the following Python code:</p>
+        <pre>
+            
+            30=To	
+            For K in range(0,T5)	                                                            
+            IF %k4==0:	
+            print(k*4)
+            elseprint(k+3)
+              
+          
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong> : 0,4,5,6,16</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+
+      
+
+    <!-- C -->
+    <li>
+      <h4>C - Question 1</h4>
+      <p>Debug the following C code:</p>
+      <pre>
+       
+        #include<stdio.h>
+            #include<conio.h>
+            Void main()
+            {
+            Int i,s=0,t,n;
+            Clrscr();
+            Printf("Enter the name:");
+            Scanf("%d",&n);                                                                                
+            While(n=0)
+            {
+            t=n%10;
+            S=(t+s)*10;
+            n=n/10
+            }
+            Printf("reverse number %d:",s);
+            getch();
+            }
+            
+       
+      </pre>
+      
+      <div class="expected-output"><strong>Expected Output:</strong> 4321</div>
+      <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+    </li>
+    <li>
+        <h4>C - Question 2</h4>
+        <p>Debug the following C code:</p>
+        <pre>
+            #include <stdio.h>                                                                       
+
+
+                int main() {
+                    int n = 29, i, flag = 1;
+                    for (i = 2; i <n ; i++)
+                        if (n % i == 0) { flag = 0; break; }
+                    printf(flag && n > 1 ? "Prime\n" : "Not Prime\n");
+                    return 0;
+                 
+          
+         
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong> 29 prime</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+        <h4>C - Question 3</h4>
+        <p>Debug the following C code:</p>
+        <pre>
+         
+            #include <stdio.h>
+                int main() {
+                    int a = 56, b = 98, ;                                  
+                    while (b != 0) {
+                        temp = a *b;
+                        a = b;
+                        b = temp;
+                    }
+                    printf("GCD: %d\n", B);
+                    return 0;
+                }
+                
+         
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong> GCD=14</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+        <h4>C - Question 4</h4>
+        <p>Debug the following C code:</p>
+        <pre>
+         
+            #include <stdio.h>
+
+                int main() {
+                    int num = 7;
+                    printf("%d is %s\n", num, (num % 2 = 0) ? "even" : "odd");      
+                    return 0;
+                }
+                
+              
+         
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong> 7 is odd</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+        <h4>C - Question 5</h4>
+        <p>Debug the following C code:</p>
+        <pre>
+         
+            int main() {
+                int _ = 3;
+                while (_++ ^ 5) putchar(64+ _);
+                return 0;
+            }
+                
+         
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong> ABCD</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      
+
+    <!-- Java -->
+    <li>
+      <h4>Java - Question 1</h4>
+      <p>Debug the following Java code:</p>
+      <pre>
+        import java.util.Scanner;
+        public void PerfectNumber {
+            public static void main(String[] args) {
+                int num = new Scanner(System.in).nextInt(), sum = 0;                          
+                for (int i = 1; i < =n; i++) if (num % i == 0) sum ++= i;                                    
+                System.out.println((sum == num) ? "Perfect Number" : "Not Perfect Number");
+            }
+        }
+        
+      </pre>
+      
+      <div class="expected-output"><strong>Expected Output:</strong> input 6  output: perfect number</div>
+      <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+    </li>
+    <li>
+        <h4>Java - Question 2</h4>
+        <p>Debug the following Java code:</p>
+        <pre>
+            import java.util.Scanner;
+            public class LCM {
+                public static void main(String[] args) {
+                    int a = new Scanner(System.in).nextInt(), b = new Scanner(System.in).nextInt();
+                    int gcd = a, temp = b;
+                    while (temp== 0) { int t = temp; temp = gcd % temp; gcd = t; }       int lcm = (a -b) / gcd;
+                    System.out.println("LCM: " - lcm);
+                }
+            }
+            
+          
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong> LCM: 36</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+        <h4>Java - Question 3</h4>
+        <p>Debug the following Java code:</p>
+        <pre>
+            public class Helloworld {
+                public static int main(Systems[] args) {                                     
+                    System.out.print("Hello, World!");
+                }
+             }
+            }
+            
+          
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong>Hello,World!</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+        <h4>Java - Question 4</h4>
+        <p>Debug the following Java code:</p>
+        <pre>
+            public class Process {     
+                public static void main(String[] args) {         
+                String str = hello;                                                                         
+             {         
+                int -length = str length();         
+                System.out.println("Length: " * length);     
+              } 
+             }
+             
+          
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong>length 5</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+      <li>
+        <h4>Java - Question 5</h4>
+        <p>Debug the following Java code:</p>
+        <pre>
+            public class Value {     
+                public static void main(String[] args) {         
+               int x = 5;                                                                           
+               int y = 2;         
+               int result = x / y;         
+               System.out.println("Result: " + result);     
+               } 
+             }
+             
+        </pre>
+        
+        <div class="expected-output"><strong>Expected Output:</strong> 2.5</div>
+        <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+      </li>
+
+    <!-- HTML -->
+    <body> </h2>
+
+        <div class="question">
+          <h3>HTML - Question 1</h3>
+          <pre><code>&lt;!DOCTYPE html&gt;
+      &lt;html lang="en"&gt;
+      &lt;head&gt;
+       &lt;meta charset="UTF-8"&gt;
+       &lt;title&gt;Example 1&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+       &lt;button onclick="increment()"&gt;Click&lt;/button&gt;
+       &lt;p id="result"&gt;&lt;/p&gt;
+       &lt;script&gt;
+       function increment() {
+       count = 1; 
+       document.getElementById("result")inner Text = count                     
+       }
+       &lt;/script&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;</code></pre>
+          <div class="expected-output">Expected Output: 1</div>
+          <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+        </div>
+      
+        <div class="question">
+          <h3>HTML - Question 2</h3>
+          <pre><code>&lt;!DOCTYPE html&gt;
+      &lt;html lang="en"&gt;
+      &lt;head&gt;
+       &lt;meta charset="UTF-8"&gt;
+       &lt;title&gt;
+      Example 3
+      &lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+       &lt;button onclick="calculate()"&gt;Calculate
+      &lt;/button&gt;
+       &lt;p id="output"&gt;&lt;/p&gt;
+       &lt;script&gt;
+      return a+b
+      }
+       function calculate() {
+       let result = add(5,3);
+       document.getElementById("output").innerText = result;
+       }
+       &lt;/script&gt;                                                                                                
+      &lt;/body&gt;
+      &lt;/html&gt;</code></pre>
+          <div class="expected-output">Expected Output: 8</div>
+          <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+        </div>
+      
+        <div class="question">
+          <h3>HTML - Question 3</h3>
+          <pre><code>&lt;!DOCTYPE html&gt;
+      &lt;html lang="en"&gt;
+      &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;title&gt;Simple Table&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+      
+        &lt;h2&gt;Student Information&lt;/h2&gt;
+        &lt;table border="1"&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Name&lt;th&gt;
+            &lt;th&gt;Age&lt;th&gt;
+            &lt;th&gt;Grade&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;John Doe&lt;/td&gt;
+            &lt;td&gt;20&lt;/td&gt;
+            &lt;td&gt;A&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;Jane Smith&lt;/td&gt;
+            &lt;td&gt;22&lt;/td&gt;
+            &lt;td&gt;B&lt;/td&gt;
+          &lt;/tr
+          &lt;tr&gt;
+            &lt;td&gt;Mike Johnson&lt;/td&gt;
+            &lt;td&gt;21&lt;/td&gt;                                                           
+            &lt;td&gt;C&lt;/td&gt;
+          &lt;/tr
+        &lt;/table&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;</code></pre>
+          <div class="expected-output">Expected Output: Table with student details</div>
+          <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+        </div>
+      
+        <div class="question">
+          <h3>HTML - Question 4</h3>
+          <pre><code>&lt;!DOCTYPE html&gt;
+      &lt;html&gt;
+      &lt;head&gt;
+          &lt;title&gt;Number Checker&lt;/title&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+          &lt;input id="num" type="number" required&gt;
+          &lt;button onclick="alert(Number(document.getElementById('num').value) &gt; 0 ? '1' : Number(document.getElementById('num').value) &lt; 0 ? '2' : 'Zero')"&gt;Check&lt;/button&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;</code></pre>
+          <div class="expected-output">Expected Output:<br>enter 5: positive<br>enter -3: negative<br>enter 0: zero</div>
+          <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+        </div>
+      
+        <div class="question">
+          <h3>HTML - Question 5</h3>
+          <pre><code>&lt;!DOCTYPE html&gt;
+      &lt;html&gt;                                          
+      &lt;head&gt;&lt;title&gt;Temperature Converter&lt;/title&gt;&lt;/head&gt;                                   
+      &lt;body&gt;
+          &lt;input id=”celsius” type=”number” placeholder=”Enter Celsius” required&gt;        
+          &lt;button onclick=”convertTemp()”&gt;Convert&lt;/button&gt;
+          &lt;p id=”result”&gt;&lt;/p&gt;
+          &lt;script&gt;
+              Function convertTemp() {
+                  Var celsius = document.getElementById(‘celsius’).value;
+                  If (celsius === ‘’) { document.getElementById(‘result’).innerText = ‘Please enter a number’; return; }
+                  Var fahrenheit = (a* 9/10) + 32;
+                  Document.getElementById(‘result’).innerText = celsius + ‘°C = ‘ + fahrenheit + ‘°F’;
+              }
+          &lt;/script&gt;
+      &lt;/body&gt;
+      &lt;/html&gt;</code></pre>
+          <div class="expected-output">Expected Output: 0°C = 32°F</div>
+          <label><input type="checkbox" class="score-checkbox"> Error Cleared</label>
+        </div>
+      
+  </ul>
+</section>
+</body>
+
+<body>
+
+<section class="scoreboard">
+  <h3>Scoreboard</h3>
+  <p>Total Score: <span id="score">0/20</span></p>
+</section>
+
+<footer>
+  
+</footer>
+
+<script>
+  const checkboxes = document.querySelectorAll('.score-checkbox');
+  const scoreDisplay = document.getElementById('score');
+
+  function updateScore() {
+    let score = 0;
+    checkboxes.forEach(cb => {
+      if (cb.checked) score++;
+    });
+    scoreDisplay.textContent = ${score}/20;
+  }
+
+  checkboxes.forEach(cb => cb.addEventListener('change', updateScore));
+
+  function toggleHint(btn) {
+    const hintBox = btn.nextElementSibling;
+    hintBox.style.display = hintBox.style.display === 'block' ?
